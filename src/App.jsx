@@ -28,9 +28,9 @@ function App() {
   return (
     <>
      <Navbar handleClick={handleClick}/>
-     <Routes>close
+     <Routes>
         <Route path="/" element={<Home close={close} valueChange={valueChange}/>} />
-        <Route path='/video/:catergory/:id' element = {<Video  valueChange={valueChange}/>} />
+        <Route path='/video/:catergoryId/:videoId' element = {<Video  valueChange={valueChange}/>} />
      </Routes>
     </>
   )

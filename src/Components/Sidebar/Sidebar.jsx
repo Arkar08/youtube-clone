@@ -2,7 +2,7 @@ import profile from '../../assets/profile.jpg'
 import './Sidebar.css'
 
 
-const Sidebar = ({close ,setCategory }) => {
+const Sidebar = ({close ,setCategory ,data }) => {
   return (
     <div className={`sideBar ${close ? "active" : ''}`}>
         <div className="sidebar_container">
@@ -38,39 +38,16 @@ const Sidebar = ({close ,setCategory }) => {
         </div>
         <div className="subscription_container">
           <h1 className={`${close ? 'active' : ''}`}>Subscriptions</h1>
-          <div className={`${close ? "subscript_active" :'subscript'}`}>
-            <img src={profile} alt="subscript-image" className='sub_image'/>
-            <h3 className={`${close ? 'clear' : ''}`}>Net Ninja</h3>
-          </div>
-          <div className={`${close ? "subscript_active" :'subscript'}`}>
-            <img src={profile} alt="subscript-image" className='sub_image'/>
-            <h3 className={`${close ? 'clear' : ''}`}>Net Ninja</h3>
-          </div>
-          <div className={`${close ? "subscript_active" :'subscript'}`}>
-            <img src={profile} alt="subscript-image" className='sub_image'/>
-            <h3 className={`${close ? 'clear' : ''}`}>Net Ninja</h3>
-          </div>
-          <div className={`${close ? "subscript_active" :'subscript'}`}>
-            <img src={profile} alt="subscript-image" className='sub_image'/>
-            <h3 className={`${close ? 'clear' : ''}`}>Net Ninja</h3>
-          </div>
-          <div className={`${close ? "subscript_active" :'subscript'}`}>
-            <img src={profile} alt="subscript-image" className='sub_image'/>
-            <h3 className={`${close ? 'clear' : ''}`}>Net Ninja</h3>
-          </div>
-        <div className={`${close ? "subscript_active" :'subscript'}`}>
-            <img src={profile} alt="subscript-image" className='sub_image'/>
-            <h3 className={`${close ? 'clear' : ''}`}>Net Ninja</h3>
-          </div>
-        </div>
-        <div className={`${close ? "subscript_active" :'subscript'}`}>
-        <img src={profile} alt="subscript-image" className='sub_image'/>
-        <h3 className={`${close ? 'clear' : ''}`}>Net Ninja</h3>
-      </div>
-      <div className={`${close ? "subscript_active" :'subscript'}`}>
-        <img src={profile} alt="subscript-image" className='sub_image'/>
-        <h3 className={`${close ? 'clear' : ''}`}>Net Ninja</h3>
-      </div>
+          {
+            data.map((dat)=>{
+              return (
+              <div className={`${close ? "subscript_active" :'subscript'}`} key={dat.id}>
+              <img src={dat.snippet.thumbnails.standard.url} alt="subscript-image" className='sub_image'/>
+              <h3 className={`${close ? 'clear' : ''}`}>{dat.snippet.channelTitle}</h3>
+            </div>)
+            })
+          }
+         </div>
     </div>
   )
 }

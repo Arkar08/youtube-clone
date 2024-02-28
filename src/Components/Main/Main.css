@@ -6,6 +6,7 @@
     padding: 10px 20px;
     gap: 20px;
     transition: 0.5s;
+    background-color: rgba(248, 243, 243, 0.929);
 }
 .main_close{
     width: 100%;
@@ -15,6 +16,7 @@
     gap: 20px;
     grid-template-columns: repeat(4,330px);
     transition: 0.5s;
+    background-color: rgba(248, 243, 243, 0.929);
 }
 .card{
     width: 100%;

@@ -15,7 +15,6 @@ const Home = ({close,valueChange}) => {
   const getData = async() =>{
     const res = await fetch(url)
     const result = await res.json()
-
     setData(result.items)
   }
 
@@ -27,7 +26,7 @@ const Home = ({close,valueChange}) => {
  
   return (
     <div className='home_container'>
-        <Sidebar close={close} setCategory={setCategory} category={category} />
+        <Sidebar close={close} setCategory={setCategory} category={category} data={data}/>
         <Main close={close} data={data} valueChange={valueChange}/>
     </div>
   )

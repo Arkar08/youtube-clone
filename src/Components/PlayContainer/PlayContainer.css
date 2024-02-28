@@ -1,0 +1,32 @@
+
+.box-card{
+    margin-top: 20px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: gray;
+    height: 150px;
+    cursor: pointer;
+}
+.box-card .left{
+    width: 50%;
+    height: 100%;
+}
+.box-card .left .video_auto{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+.right{
+    margin: 10px;
+    width: 50%;
+}
+.right h2{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: start;
+    text-wrap: wrap;
+}

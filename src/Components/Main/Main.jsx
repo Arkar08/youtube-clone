@@ -9,7 +9,7 @@ const Main = ({close , data ,valueChange}) => {
         {
             data && data.map((dat) =>{
                 return (
-                    <Link to={`video/${dat.snippet.categoryId}/${dat.id}`} className="card" key={dat.id}>
+                    <Link to= {`video/${dat.snippet.categoryId}/${dat.id}`} className="card" key={dat.id}>
                         <img src={dat.snippet.thumbnails.medium.url} alt="main_vd" className='video'/>
                         <div className='vd-profile'>
                             <img src={dat.snippet.thumbnails.default.url}alt="" className='vd_profile'/>
