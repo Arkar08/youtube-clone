@@ -1,4 +1,4 @@
-import profile from '../../assets/profile.jpg'
+
 import './Sidebar.css'
 
 

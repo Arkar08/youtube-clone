@@ -3,14 +3,13 @@ import VideoView from '../../Components/VideoView/VideoView'
 import './Video.css'
 import { useParams } from 'react-router-dom'
 
-const Video = () => {
+const Video = ({valueChange}) => {
 
-const {videoId , categoryId} = useParams()
-
+const {videoId , catergoryId} = useParams()
   return (
     <div className="videoConainer">
-      <VideoView videoId={videoId}/>
-      <PlayContainer categoryId={categoryId}/>
+      <VideoView videoId={videoId} valueChange={valueChange}/>
+      <PlayContainer catergoryId={catergoryId} valueChange={valueChange}/>
     </div>
     
   )

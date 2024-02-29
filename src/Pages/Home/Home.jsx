@@ -8,7 +8,7 @@ const Home = ({close,valueChange}) => {
 
   const [data , setData] = useState([])
 
-  const key = "AIzaSyBgxhVYmuq_whYoGSkDGtY90QtHFaYIsnU";
+  const key = "AIzaSyB0SPs6zeFq120ysmXyxiAQAkGtRCC6tPE";
 
   const url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${key}`
 
